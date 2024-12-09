@@ -1,0 +1,3314 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		@font-face {
+				font-family:Yekan;
+				src: url(fonts/Yekan.ttf);
+		}
+		body{
+		margin:0;
+		}
+		#header{
+			//border:1px solid red;
+			height: 115px;
+			padding-top: 22px;
+			position:relative;
+		}
+		#header > #header02{
+			//border:1px solid #ccc;
+			height:115px;
+			padding:0 15px;
+			margin:0 auto;
+			
+		}
+		#header > #header02 > #header03{
+			//border:1px solid blue;
+			height:115px;
+			padding:0 60px;
+			margin:0 -15px;
+			
+		}
+		#header > #header02 > #header03 > #header04{
+			//border:1px solid blue;
+			width:1411px;
+			height:115px;
+			margin:0 auto;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headRight{
+			//border:1px solid green;
+			width:300px;
+			height:24px;
+			float:right;
+			margin-bottom:70px;
+			margin-right:52px;
+			//position:relative;
+
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems{
+			list-style:none;
+			display:flex;
+			margin:0 auto;
+			float:right;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01{
+			margin-left:10px;
+			margin-right:70px;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01:hover{
+			cursor:pointer;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu{
+			width:380px;
+			height:354px;
+			//outline:none;
+			//border:1px solid #ccc;
+			position:absolute;
+			top:50px;
+			right:167px;
+			margin:0 auto;
+			opacity:0;
+			visibility:hidden;
+			transition:1s;
+			background:#fff;
+			border-radius:5px;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01:hover > #headRightMenu{
+			opacity:1;
+			visibility:visible;
+			transition:0.5s;
+			cursor:default;
+			z-index:10;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > img{
+			margin:0px 80px 0px 80px;
+			background:#fff;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > #headRightMenu02{
+			//border:1px solid green;
+			width:340px;
+			height:20px;
+			margin-bottom:30px;
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
+			font-family:Yekan;
+			line-height:18px;
+			//font-weight:bold;
+			font-size:18px;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > #headRightMenu03{
+			//border:1px solid green;
+			width:340px;
+			height:24px;
+			margin-bottom:10px;
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
+			font-family:Yekan;
+			line-height:22px;
+			color:#555;
+			font-size:14px;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > #headRightMenu04 > .headRightMenuSpan{
+			width:0;
+			margin-left: 10px;
+			margin-right: 10px;
+			height: 15px;
+			border: 0.1px solid #ccc;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > #headRightMenu04 > .headRightMenuA{
+			//border:1px solid red;
+			text-decoration:none;
+			color:rgb(0,162,232);
+			font-family:Yekan;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it01 > #headRightMenu > #headRightMenu04 > .A01{
+			margin-left:30px;
+		}
+		#header > #header02 > #header03 > #header04 > #headRight > #headRightItems > .it02 > a{
+			text-decoration:none;
+			color:#000;
+			line-height:25px;
+			font-family:Yekan;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter{
+			//border:1px solid green;
+			width:700px;
+			height:115px;
+			float:right;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #DigistyleLogo{
+			//border:1px solid yellow;
+			width:207px;
+			height:34px;
+			text-align:center;
+			font-size:40px;
+			line-height:31px;
+			font-family:Arial;
+			margin:0 auto;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #DigistyleLogo > a{
+			color:rgb(44,27,20);
+			text-decoration:none;
+		}
+		#header > #header02 > #header03 > #header04 > #headLeft{
+			//border:1px solid green;
+			width:300px;
+			height:29px;
+			float:right;
+			margin-bottom:70px;
+
+		}
+		#header > #header02 > #header03 > #header04 > #headLeft #headLeftSearch{
+			width:250px;
+			height:25px;
+			border:none;
+			border-bottom:2px solid #000;
+			margin-top:1px;
+			margin-left:23px;
+		}
+		#header > #header02 > #header03 > #header04 > #headLeft #headLeftSearch .s01{
+			/* border:1px solid red; */
+			width:20px;
+			height:24px;
+			float:right;
+			margin-left:1px;
+		}
+		#header > #header02 > #header03 > #header04 > #headLeft #headLeftSearch .s02{
+			float:left;
+		}
+		#header > #header02 > #header03 > #header04 > #headLeft #headLeftSearch .s02 > form > #headLeftSearchInput{
+			width:214px;
+			height:20px;
+			border:none;
+			margin-left:5px;
+			margin-top:1px;
+			outline:none;
+			font-family:Yekan;
+			font-size:15px;
+			padding-left:8px;
+			background:none;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #lineCenter01{
+			width:420px;
+			height:0.1px;
+			margin:26px auto 0px;
+			border:0.1px solid black;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01{
+			//border:1px solid yellow;
+			width:680px;
+			height:44px;
+			padding:10px 10px 0 10px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .itemsMenu1{
+			//border:1px solid green;
+			float:right;
+			height:100%;
+			width:79px;
+			line-height:40px;
+			font-size:15px;
+			color:rgb(65,65,65);
+			font-family:Yekan;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .itemsMenu1:hover{
+			color:#000;
+			text-shadow:1px 1px 1px #ccc;
+			cursor:pointer;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it01{
+			width:60px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+			margin-right:29px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it02{
+			width:60px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it03{
+			width:60px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it04{
+			width:100px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > #lineCenter02{
+			width:0;
+			margin-top: 20px;
+			margin-bottom: auto;
+			margin-left: 20px;
+			margin-right: 20px;
+			height: 15px;
+			border: 0.1px solid #000;
+			text-align: center;
+			float: right;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it05{
+			width:85px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+			color:#ef394e;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it05:hover{
+			color:rgb(217,0,49);
+			text-shadow:1px 1px 1px #ef394e;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06{
+			width:50px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand{
+			//border:1px solid #ccc;
+			width:100%;
+			height:363px;
+			position:absolute;
+			top:137px;
+			right:0;
+			z-index:5;
+			opacity:0;
+			visibility:hidden;
+			padding-top:40px;
+			padding-bottom:58px;
+			background:#fff;
+			cursor:default;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06:hover > #megaMenuBrand{
+			opacity:1;
+			visibility:visible;
+			transition:0.8s;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02{
+			margin:0 16px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb01{
+			//border:1px solid green;
+			width:230px;
+			height:363px;
+			float:right;
+			margin-right:400px;
+		}
+
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > #megaMenuLineCenter01{
+			width:0;
+			height:370px;
+			margin:20px 40px 24px 40px;
+			float:right;
+			border:0.1px solid #ccc;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02{
+			//border:1px solid green;
+			width:416px;
+			height:301px;
+			float:left;
+			margin-left:354px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandSpan01{
+			//border:1px solid yellow;
+			float:right;
+			width:100%;
+			height:21px;
+			font-family:Yekan;
+			text-align:right;
+			line-height:15px;
+			font-size:20px;
+			margin-bottom:20px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg{
+			width:416px;
+			height:236px;
+			//border:1px solid red;
+			float:right;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .megaMenuBrandImg1{
+			//border:1px solid gold;
+			float:right;
+			cursor:pointer;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi1{
+			width:200px;
+			height:110px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi1 > img{
+			width:100%;
+			height:100%;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi2{
+			width:200px;
+			height:110px;
+			float:left;
+			
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi2 > img{
+			width:100%;
+			height:100%;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi3{
+			width:200px;
+			height:110px;
+			margin-top:13px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi3 > img{
+			width:100%;
+			height:100%;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi4{
+			width:200px;
+			height:110px;
+			float:left;
+			margin-top:13px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandImg > .Bi4 > img{
+			width:100%;
+			height:100%;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it06 > #megaMenuBrand > #megaMenuBrand02 > .mmb02 > #megaMenuBrandSpan02{
+			//border:1px solid yellow;
+			float:right;
+			width:100%;
+			height:28px;
+			text-align:left;
+			line-height:15px;
+			font-family:Yekan;
+			font-size:19px;
+			margin-top:20px;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it07{
+			width:70px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}
+		#header > #header02 > #header03 > #header04 > #headCenter > #headMenu01 > .it08{
+			width:70px;
+			height:100%;
+			line-height:58px;
+			text-align:center;
+		}
+		#slideShow{
+			//border:1px solid blue;
+			width:1519px;
+			height:675px;
+			margin:0 auto;
+			//position:absolute;
+			top:-142px;
+			//left:7px;
+			position:relative;
+			z-index:-1;
+			overflow:hidden;
+			
+		}
+		#slideShow > #sliders{
+			//border:1px solid green;
+			width:700%;
+			height:100%;
+			position:relative;
+			transition:0.5s;
+			left:0;
+			
+		}
+		#slideShow > #sliders > .itemsSlidshow{
+			height:100%;
+			width:14.2857142857%;
+			float:right;
+		}
+		#slideShow > #sliders > .itemsSlidshow > img{
+			width:100%;
+			height:100%;
+		}
+		#slideShow > #rightclickslidr{
+			width:70px;
+			height:70px;
+			//border:1px solid yellow;
+			position:absolute;
+			background:url("img/header/icons8-arrows-50.png") no-repeat 50%;
+	
+			background-size:60px;
+			top:520px;
+			right:50px;
+			cursor:pointer;
+		}
+		#slideShow > #leftclickslidr{
+			width:70px;
+			height:70px;
+			//border:1px solid yellow;
+			position:absolute;
+			background:url("img/header/icons8-arrow-50.png") no-repeat 50%;
+	
+			background-size:60px;
+			top:520px;
+			right:160px;
+			cursor:pointer;
+		}
+		
+		
+		
+		#content{
+			width:1519px;
+			//border:1px solid red;
+			position:absolute;
+			top:670px;
+			right:0;
+			margin:0 auto;
+			z-index:-6;
+		}
+		
+		
+		#content > #content1{
+			//height:8133px;
+			//border:1px solid black;
+			position:absolute;
+			top:80px;
+			width:100%;
+			z-index:-2;
+			left:0;
+			background:#fff;
+			
+		}
+		#content > #content1 > #contSlid01{
+			width:100%;
+			height:824px;
+			padding:20px 0;
+			margin:0 auto;
+			//border:1px solid red;
+		}
+		#content > #content1 > #contSlid01 > #contSlidp01{
+			//border:1px solid green;
+			float:right;
+			font-family:Yekan;
+			font-size:30px;
+			background:#fff;
+			margin-right:75px;
+			position:absolute;
+			top:30px;
+			right:0;
+		}
+		#content > #content1 > #contSlid01 > #contSlidp02{
+			border:1px solid #000;
+			float:left;
+			font-family:Yekan;
+			font-size:17px;
+			background:#fff;
+			width:65px;
+			height:26px;
+			margin-left:-40px;
+			color:#000;
+			padding:8px 24px;
+			text-align:center;
+			cursor:pointer;
+			position:absolute;
+			top:30px;
+			left:120px;
+		}
+		#content > #content1 > #contSlid01 > #contSlidp02:hover{
+			color:#fff;
+			background:#000;
+			
+		}
+		#content > #content1 > #contSlid01 > #contSlid01Img{
+			//border:1px solid green;
+			width:455px;
+			height:680px;
+			float:right;
+			position:absolute;
+			top:120px;
+			right:75px;
+			outline:none;
+		}
+		#content > #content1 > #contSlid01 > #contSlid01Img > img{
+			width:100%;
+			height:100%;
+		}
+
+		#content > #content1 > #contSlid01 > #slid01A{
+			width:1277px;
+			height:822px;
+			border:1px solid #000;
+			margin:0 auto;
+			z-index:-2;
+			position:absolute;
+			top:30px;
+			left:115px;
+		}
+		
+		
+		
+
+
+		
+		
+#slider{
+	position:relative;
+	    
+	//border:1px solid #ccc;
+	width:1154px;
+	height:560px;
+	margin-left:-170px;
+	margin-top:200px;
+	overflow:hidden;
+	background:#fff;
+}
+
+#slider > #gal{
+	//border:1px solid red;
+	width:500%;
+	height:100%;
+	position:relative;
+	transition:0.5s;
+	left:0;
+}
+
+#slider > #gal > .items{
+	width:20%;
+	height:100%;
+	
+	float:left;
+}
+#slider > #gal > .items > .galItems{
+	height:560px;
+	width:370px;
+	//border:1px solid blue;
+	float:left;
+	margin-left:8px;
+	position:relative;
+	cursor:pointer;
+}
+#slider > #gal > .items > .galItems > #galit1{
+	//border:1px solid red;
+	width:100%;
+	height:386px;
+}
+#slider > #gal > .items > .galItems > #galit1 > #it1{
+	//border:1px solid red;
+	height:24px;
+	position:absolute;
+	top:0;
+	right:-2px;
+	padding:6px 12px;
+	font-family:Yekan;
+	color:#555;
+	background:rgba(216,216,216,0.2);
+	cursor:pointer;
+
+}
+#slider > #gal > .items > .galItems > #galit1 > #it2{
+	bottom:172px;
+	left:0;
+	position:absolute;
+	height:24px;
+	width:28px;
+	padding:12px;
+	background:#262626;
+	font-family:Yekan;
+	color:#fff;
+
+}
+#slider > #gal > .items > .galItems > #galit1 > img{
+	width:100%;
+	height:100%;
+}
+#slider > #gal > .items > .galItems > #galit2{
+	//border:1px solid red;
+	width:100%;
+	height:118px;
+	margin-top:12px;
+	
+}
+#slider > #gal > .items > .galItems > #galit2 > .id01{
+	//border:1px solid yellow;
+	//width:100%;
+	height:50px;
+	font-family:Yekan;
+	text-align:right;
+	
+	font-size:18px;
+	line-height:25px;
+	background:transparent;
+	color:rgb(58,58,58);
+}
+#slider > #gal > .items > .galItems > #galit2 > .id02{
+	//border:1px solid green;
+	width:100%;
+	height:24.8px;
+	margin-bottom:12px;
+	margin-top:30px;
+	
+}
+#slider > #gal > .items > .galItems > #galit2 > .id02 > .id03{
+	//border:1px solid orange;
+	width:82.3px;
+	height:24.8px;
+	font-family:Yekan;
+	text-align:center;
+	font-size:20px;
+	line-height:20px;
+	color:rgb(58,58,58);
+}
+
+
+
+
+
+
+
+#slider > #right{
+	position:absolute;
+	top:230px;
+	right:15px;
+	
+	background:#ccc url("img/header/icons8-arrows-50.png") no-repeat 50%;
+	
+	background-size:60px;
+	width:70px;
+	height:70px;	
+	cursor:pointer;
+	opacity:0.5;
+}
+
+#slider > #left{
+	position:absolute;
+	top:230px;
+	left:320px;
+
+	background:#ccc url("img/header/icons8-arrow-50.png") no-repeat 50%;
+	
+	background-size:60px;
+	width:70px;
+	height:70px;	
+	cursor:pointer;	
+	opacity:0.5;
+}
+
+
+
+
+#content > #ContentMenu{
+	height:768px;
+	//border:1px solid green;
+	margin:40px 0;
+	padding:24px 80px 0 80px;
+	position:absolute;
+	right:0;
+	top:940px;
+	//width:1519px;
+	background:rgb(230,230,230);
+
+}
+#content > #ContentMenu > #ContMenu{
+	height:52px;
+	border-bottom:1px solid #fff;
+	position:relative;
+	margin:0 auto 40px;
+	width:1359px;
+	
+}	
+
+#content > #ContentMenu > #ContMenu > #CMI1{
+	margin-right:430px;
+	//border:1px solid lightblue; 
+	float:right;
+	height:52px;
+	padding:0 16px;
+	margin-left:12px;
+	line-height:48px;
+	font-size:1.5rem;
+	font-family:Yekan;
+	color:rgb(117,117,117);
+	cursor:pointer;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg{
+	height:673px;
+	//border:1px solid blue;
+	margin:0 auto;
+	position:absolute;
+	top:93px;
+	right:0;
+	width:1359px;
+	opacity:0;
+	visibility:hidden;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JayeAks{
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+	
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > #JA1{
+	background:url(img/header/a1.jpg) no-repeat;
+	background-size:100%;
+	transition:0.4s;
+	position:relative;
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > #JA1:hover{
+	//background:url(img/header/a1.jpg) no-repeat;
+	background-size:100.5%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .CMG{
+	//border:1px solid red;
+	width:426px;
+	height:100%;
+	float:left;
+	//margin-right:20px;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G1{
+	background:url(img/header/a2.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G1:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G2{
+	background:url(img/header/a3.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+	margin:0 40px;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G2:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G3{
+	background:url(img/header/a4.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G3:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > #JA1 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > #JA1:hover > .mardane{
+	 color:#000;
+	
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G1 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G1:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G2 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G2:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G3 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI1 > #ContMenuImg > .JA2 > .G3:hover > .mardane{
+	 color:#000;
+}
+
+#content > #ContentMenu > #ContMenu > #CMI2{
+	//margin-right:430px;
+	//border:1px solid lightblue; 
+	float:right;
+	height:52px;
+	padding:0 16px;
+	margin:0 12px;
+	line-height:48px;
+	font-size:1.5rem;
+	font-family:Yekan;
+	color:rgb(117,117,117);
+	cursor:pointer;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01{
+	height:673px;
+	//border:1px solid blue;
+	margin:0 auto;
+	position:absolute;
+	top:93px;
+	right:0;
+	width:1359px;
+	opacity:0;
+	visibility:hidden;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JayeAks{
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > #JA3{
+	background:url(img/header/b1.jpg) no-repeat;
+	background-size:100%;
+	transition:0.4s;
+	position:relative;
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > #JA3:hover{
+	//background:url(img/header/b1.jpg) no-repeat;
+	background-size:100.5%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .CMG{
+	//border:1px solid red;
+	width:426px;
+	height:100%;
+	float:left;
+	//margin-right:20px;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G1{
+	background:url(img/header/b2.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G1:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G2{
+	background:url(img/header/b3.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+	margin:0 40px;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G2:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G3{
+	background:url(img/header/b4.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G3:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > #JA3 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > #JA3:hover > .mardane{
+	 color:#000;
+	
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G1 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G1:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G2 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G2:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G3 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI2 > #ContMenuImg01 > .JA2 > .G3:hover > .mardane{
+	 color:#000;
+}
+
+
+
+#content > #ContentMenu > #ContMenu > #CMI3{
+	//margin-right:430px;
+	//border:1px solid lightblue; 
+	float:right;
+	height:52px;
+	padding:0 16px;
+	margin:0 12px;
+	line-height:48px;
+	font-size:1.5rem;
+	font-family:Yekan;
+	color:rgb(117,117,117);
+	cursor:pointer;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02{
+	height:673px;
+	//border:1px solid blue;
+	margin:0 auto;
+	position:absolute;
+	top:93px;
+	right:0;
+	width:1359px;
+	opacity:0;
+	visibility:hidden;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JayeAks{
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > #JA4{
+	background:url(img/header/c1.jpg) no-repeat;
+	background-size:100%;
+	transition:0.4s;
+	position:relative;
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > #JA4:hover{
+	//background:url(img/header/c1.jpg) no-repeat;
+	background-size:100.5%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .CMG{
+	//border:1px solid red;
+	width:659px;
+	height:100%;
+	float:left;
+	//margin-right:20px;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G1{
+	background:url(img/header/c2.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G1:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G2{
+	background:url(img/header/c3.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+	margin:0 0 0 40px;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G2:hover{
+	background-size:117%;
+}
+
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > #JA4 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > #JA4:hover > .mardane{
+	 color:#000;
+	
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G1 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G1:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G2 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI3 > #ContMenuImg02 > .JA2 > .G2:hover > .mardane{
+	 color:#000;
+}
+
+
+#content > #ContentMenu > #ContMenu > #CMI4{
+	//margin-right:430px;
+	//border:1px solid lightblue; 
+	float:right;
+	height:52px;
+	padding:0 16px;
+	margin:0 12px;
+	line-height:48px;
+	font-size:1.5rem;
+	font-family:Yekan;
+	color:rgb(117,117,117);
+	cursor:pointer;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03{
+	height:673px;
+	//border:1px solid blue;
+	margin:0 auto;
+	position:absolute;
+	top:93px;
+	right:0;
+	width:1359px;
+	opacity:0;
+	visibility:hidden;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JayeAks{
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > #JA4{
+	background:url(img/header/d1.jpg) no-repeat;
+	background-size:100%;
+	transition:0.4s;
+	position:relative;
+	height:297px;
+	//border:1px solid yellow;
+	margin-bottom:40px;
+	width:100%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > #JA4:hover{
+	//background:url(img/header/d1.jpg) no-repeat;
+	background-size:100.5%;
+}	
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .CMG{
+	//border:1px solid red;
+	width:309px;
+	height:100%;
+	float:left;
+	//margin-right:20px;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G1{
+	background:url(img/header/d2.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G1:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G2{
+	background:url(img/header/d3.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+	margin:0 40px;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G2:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G3{
+	background:url(img/header/d4.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+	margin-right:40px;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G3:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G4{
+	background:url(img/header/d5.jpg) no-repeat;
+	background-size:116%;
+	transition:0.4s;
+	position:relative;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G4:hover{
+	background-size:117%;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > #JA4 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > #JA4:hover > .mardane{
+	 color:#000;
+	
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G1 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G1:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G2 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G2:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G3 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G3:hover > .mardane{
+	 color:#000;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G4 > .mardane{
+	//border:1px solid green;
+	height:28px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	line-height:24px;
+	padding:8px 8px 8px 16px;
+	color:#7b7b7b;
+	background:rgb(230,230,230);
+	transition:0.5s;
+}
+#content > #ContentMenu > #ContMenu > #CMI4 > #ContMenuImg03 > .JA2 > .G4:hover > .mardane{
+	 color:#000;
+}
+
+
+
+#content2{
+	height:600px;
+	width:1519px;
+	background:#fff;
+	position:relative;
+	top:1772px;
+	right:0;
+}
+#content2 > #titleslider1{
+	width:125px;
+	height:103.2px;
+	//border:1px solid green;
+	float:right;
+	margin-right:74px;
+	margin-top:150px;
+	font-size:30px;
+	font-family:Yekan;
+	text-align:center;
+}
+#content2 > #moshahede{
+	width:74px;
+	height:26px;
+	border:1px solid #000;
+	float:right;
+	cursor:pointer;
+	padding:8px 24px;
+	font-family:Yekan;
+	text-align:center;
+	position:absolute;
+	right:74px;
+	top:470px;
+	background:#fff;
+	color:#000;
+	line-height:25px;
+	font-size:15px;
+}
+#content2 > #moshahede:hover{
+	background:#000;
+	color:#fff;
+}
+
+
+
+#slider02{
+	position:absolute;
+	    
+	//border:1px solid #ccc;
+	width:1154px;
+	height:560px;
+	margin-left:75px;
+	margin-top:80px;
+	overflow:hidden;
+	background:#fff;
+}
+
+#slider02 > #gal02{
+	//border:1px solid red;
+	width:500%;
+	height:100%;
+	position:relative;
+	transition:0.5s;
+	left:0;
+}
+
+#slider02 > #gal02 > .items02{
+	width:20%;
+	height:100%;
+	
+	float:left;
+}
+#slider02 > #gal02 > .items02 > .galItems02{
+	height:560px;
+	width:370px;
+	//border:1px solid blue;
+	float:left;
+	margin-left:8px;
+	position:relative;
+	cursor:pointer;
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit3{
+	//border:1px solid red;
+	width:100%;
+	height:386px;
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit3 > #it1g{
+	//border:1px solid red;
+	height:24px;
+	position:absolute;
+	top:0;
+	right:-2px;
+	padding:6px 12px;
+	font-family:Yekan;
+	color:#555;
+	background:rgba(216,216,216,0.2);
+	cursor:pointer;
+
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit3 > #it2h{
+	bottom:172px;
+	left:0;
+	position:absolute;
+	height:24px;
+	width:28px;
+	padding:12px;
+	background:#262626;
+	font-family:Yekan;
+	color:#fff;
+
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit3 > img{
+	width:100%;
+	height:100%;
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit4{
+	//border:1px solid red;
+	width:100%;
+	height:118px;
+	margin-top:12px;
+	
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit4 > .id01{
+	//border:1px solid yellow;
+	//width:100%;
+	height:50px;
+	font-family:Yekan;
+	text-align:right;
+	
+	font-size:18px;
+	line-height:25px;
+	background:transparent;
+	color:rgb(58,58,58);
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit4 > .id02{
+	//border:1px solid green;
+	width:100%;
+	height:24.8px;
+	margin-bottom:12px;
+	margin-top:30px;
+	
+}
+#slider02 > #gal02 > .items02 > .galItems02 > #galit4 > .id02 > .id03{
+	//border:1px solid orange;
+	width:82.3px;
+	height:24.8px;
+	font-family:Yekan;
+	text-align:center;
+	font-size:20px;
+	line-height:20px;
+	color:rgb(58,58,58);
+}
+
+
+
+
+
+
+
+#slider02 > #right02{
+	position:absolute;
+	top:230px;
+	right:15px;
+	
+	background:#ccc url("img/header/icons8-arrows-50.png") no-repeat 50%;
+	
+	background-size:60px;
+	width:70px;
+	height:70px;	
+	cursor:pointer;
+	opacity:0.5;
+}
+
+#slider02 > #left02{
+	position:absolute;
+	top:230px;
+	left:0;
+
+	background:#ccc url("img/header/icons8-arrow-50.png") no-repeat 50%;
+	
+	background-size:60px;
+	width:70px;
+	height:70px;	
+	cursor:pointer;	
+	opacity:0.5;
+}
+
+	
+	
+#content3{
+	width:1519px;
+	height:1228px;
+	//border:1px solid green;
+	position:absolute;
+	top:2440px;
+	right:0;
+}
+#content3 > #ndombe1{
+	width:100%;
+	height:40px;
+	//padding:0 80px;
+	margin-bottom:24px;
+	//border:1px solid red;
+}
+#content3 > #ndombe1 > #nd01{
+	//border:1px solid blue;
+	height:40px;
+	float:right;
+	margin-right:110px;
+	font-size:35px;
+	line-height:30px;
+	font-family:Yekan;
+}
+#content3 > #ndombe1 > #nd02{
+	//border:1px solid blue;
+	height:24px;
+	float:left;
+	margin-left:110px;
+	font-size:16px;
+	width:164px;
+	background:url(img/header/icons8-arrow-50.png) no-repeat;
+	background-position:8% 50%;
+	background-size:28px;
+	//line-height:30px;
+	font-family:Yekan;
+	margin-top:7px;
+	cursor:pointer;
+	text-align:right;
+}
+#content3 > #ndombe2{
+	width:100%;
+	height:200px;
+	//border:1px solid red;
+	position:absolute;
+	top:55px;
+	left:0;
+	background:rgb(209,206,236);
+	z-index:-3;
+}
+#content3 > #ndombe2 > #ndombe2Img{
+	height:64px;
+	width:64px;
+	float:right;
+	margin-right:250px;
+	margin-top:40px;
+}
+
+#content3 > #ndombe2 > #ndombe2Img > img{
+	height:100%;
+	width:100%;
+	
+}
+#content3 > #ndombe2 > #ndombe2Img > #ndombe2p{
+	height:24px;
+	//border:1px solid green;
+	margin-left:-70px;
+	width:170px;
+	//float:right;
+	margin-right:0;
+	margin-top:10px;
+	font-family:Yekan;
+	text-align:right;
+	background:url(img/header/icons8-arrow-50.png) no-repeat;
+	background-position:3% 50%;
+	background-size:28px;
+	
+}
+#content3 > #ndombe4{
+	width:100%;
+	height:200px;
+	//border:1px solid red;
+	position:absolute;
+	top:615px;
+	left:0;
+	background:rgb(209,206,236);
+	z-index:-3;
+}
+#content3 > #ndombe3{
+	//border:1px solid blue;
+	width:1000px;
+	height:486px;
+	margin-left:50px;
+	margin-top:50px;
+}
+#content3 > #ndombe3 > .ndombe31{
+	//border:1px solid red;
+	height:100%;
+	width:321px;
+	float:left;
+	margin-left:6px;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb1{
+	//border:1px solid red;
+	width:100%;
+	height:386px;
+	position:relative;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb1 > #nD01{
+	position:absolute;
+	top:0;
+	right:0;
+	background-color:rgba(216,216,216,0.2);
+	color:#555;
+	font-family:Yekan;
+	padding:6px 12px;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb1 > img{
+	width:100%;
+	height:100%;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb2{
+	//border:1px solid red;
+	width:100%;
+	height:98px;
+	//margin-top:12px;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb2 > #nD02{
+	//border:1px solid yellow;
+	width:100%;
+	height:50px;
+	font-family:Yekan;
+	text-align:right;
+}
+#content3 > #ndombe3 > .ndombe31 > #amb2 > #nD03{
+	//border:1px solid green;
+	width:100%;
+	height:24.8px;
+	margin-bottom:12px;
+	margin-top:10px;
+	font-family:Yekan;
+}
+#content3 > #ndombe4 > #ndombe4Img{
+	height:64px;
+	width:64px;
+	float:left;
+	margin-left:250px;
+	margin-top:40px;
+}
+
+#content3 > #ndombe4 > #ndombe4Img > img{
+	height:100%;
+	width:100%;
+	
+}
+#content3 > #ndombe4 > #ndombe4Img > #ndombe4p{
+	height:24px;
+	//border:1px solid green;
+	
+	width:170px;
+	//float:right;
+	margin-left:-67px;
+	margin-top:10px;
+	font-family:Yekan;
+	text-align:right;
+	background:url(img/header/icons8-arrow-50.png) no-repeat;
+	background-position:3% 50%;
+	background-size:28px;
+	
+}
+#content3 > #ndombe5{
+	//border:1px solid blue;
+	width:1000px;
+	height:486px;
+	margin-left:490px;
+	margin-top:80px;
+}
+#content3 > #ndombe5 > .ndombe51{
+	//border:1px solid red;
+	height:100%;
+	width:321px;
+	float:left;
+	margin-left:6px;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb3{
+	//border:1px solid red;
+	width:100%;
+	height:386px;
+	position:relative;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb3 > #nD04{
+	position:absolute;
+	top:0;
+	right:0;
+	background-color:rgba(216,216,216,0.2);
+	color:#555;
+	font-family:Yekan;
+	padding:6px 12px;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb3 > img{
+	width:100%;
+	height:100%;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb4{
+	//border:1px solid red;
+	width:100%;
+	height:98px;
+	//margin-top:12px;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb4 > #nD05{
+	//border:1px solid yellow;
+	width:100%;
+	height:50px;
+	font-family:Yekan;
+	text-align:right;
+}
+#content3 > #ndombe5 > .ndombe51 > #amb4 > #nD06{
+	//border:1px solid green;
+	width:100%;
+	height:24.8px;
+	margin-bottom:12px;
+	margin-top:10px;
+	font-family:Yekan;
+}
+#content4{
+	//border:1px solid green;
+	height:758px;
+	width:1519px;
+	position:absolute;
+	top:3660px;
+	right:0;
+}
+#content4 > #Cont4head{
+	//border:1px solid red;
+	width:1359px;
+	height:39px;
+	margin:0 auto 24px;
+	font-family:Yekan;
+	font-size:40px;
+	text-align:right;
+	line-height:33px;
+}
+#content4 > #Cont4{
+	width:1359px;
+	height:655px;
+	//border:1px solid blue;
+	margin:0 auto 40px;
+}
+#content4 > #Cont4 > .poster{
+	height:100%;
+	width:327px;
+	//border:1px solid red;
+	float:left;
+	margin-left:8px;
+	margin-right:8px;
+	cursor:pointer;
+	
+}
+#content4 > #Cont4 > .post1{
+	margin-left:0;
+}
+#content4 > #Cont4 > .post4{
+	margin-right:0;
+}
+#content4 > #Cont4 > .poster > img{
+	height:100%;
+	width:100%;
+}
+#content5{
+	//border:1px solid green;
+	position:absolute;
+	top:4520px;
+	right:0;
+	width:1519px;
+	height:437px;
+}
+#content5 > #AkharinMatlabHead{
+	width:1359px;
+	height:39px;
+	//border:1px solid red;
+	margin:0 auto 24px;
+	font-family:Yekan;
+	text-align:right;
+	font-size:40px;
+	line-height:34px;
+}
+#content5 > #AkharinMatlabCont{
+	width:1359px;
+	height:373px;
+	//border:1px solid red;
+	margin:0 auto 40px;
+}
+#content5 > #AkharinMatlabCont > .Matlab{
+	height:340px;
+	width:276px;
+	//border:1px solid yellow;
+	float:left;
+	margin:0 20px;
+	padding:16px;
+}
+#content5 > #AkharinMatlabCont > .Matlab:hover{
+	border:1px solid #000;
+	cursor:pointer;
+}
+#content5 > #AkharinMatlabCont > .lab1{
+	margin-left:0;
+	
+}
+#content5 > #AkharinMatlabCont > .lab4{
+	margin-right:0;
+	
+}
+#content5 > #AkharinMatlabCont > .Matlab > #lab1img{
+	//border:1px solid blue;
+	height:179px;
+	width:276px;
+}
+#content5 > #AkharinMatlabCont > .Matlab > #lab1img > img{
+	height:100%;
+	width:100%;
+}
+#content5 > #AkharinMatlabCont > .Matlab > #lab1p{
+	//border:1px solid blue;
+	height:136px;
+	width:276px;
+	margin-top:24px;
+}
+#content5 > #AkharinMatlabCont > .Matlab > #lab1p > #lab1p1{
+	//border:1px solid green;
+	height:44px;
+	width:276px;
+	margin-bottom:12px;
+	text-align:right;
+	font-family:yekan;
+	font-size:18px;
+	line-height:20px;
+}
+#content5 > #AkharinMatlabCont > .Matlab > #lab1p > #lab1p2{
+	//border:1px solid red;
+	height:80px;
+	width:276px;
+	//margin-bottom:12px;
+	text-align:right;
+	font-family:Yekan;
+	font-size:9px;
+	line-height:20px;
+}
+#content5 > #AkharinMatlabCont > .lab2 > #lab1p > #lab1p2{
+	font-size:8.9px;
+}
+#content5 > #AkharinMatlabCont > .lab3 > #lab1p > #lab1p2{
+	font-size:8.8px;
+}
+#content6{
+	//border:1px solid red;
+	position:absolute;
+	top:5050px;
+	right:0;
+	width:1519px;
+	height:254px;
+}
+#content6 > #Cont6img{
+	//border:1px solid red;
+	margin:0 auto;
+	width:1359px;
+	height:254px;
+	cursor:pointer;
+}
+#content6 > #Cont6img > img{
+	width:100%;
+	height:100%;
+}
+#content7{
+	width:1359px;
+	height:200px;
+	padding:40px 80px;
+	//border:1px solid green;
+	position:absolute;
+	top:5380px;
+	right:0;
+}
+#content7 > #Cont7A{
+	width:1159px;
+	height:100%;
+	//border:1px solid red;
+	margin:0 auto;
+	padding:0 100px;
+}
+#content7 > #Cont7A > .TagAPayan{
+	//border:1px solid blue;
+	width:259px;
+	margin:0 16px;
+	height:100%;
+	float:right;
+}
+#content7 > #Cont7A > .TAP1{
+	margin-right:0;
+}
+#content7 > #Cont7A > .TAP4{
+	margin-left:0;
+}
+#content7 > #Cont7A > .TagAPayan > .payanMardane{
+	
+	display:block;
+	text-align:right;
+	//border:1px solid yellow;
+	font-family:yekan;
+	height:30px;
+	font-size:17px;
+	color:#555;
+	cursor:pointer;
+}
+#content7 > #Cont7A > .TagAPayan > .payanMardane:hover{
+	text-decoration:underline;
+	//border-bottom:1px solid #000;
+}
+#content7 > #Cont7A > .TagAPayan > .pm1{
+	height:40px;
+	font-size:22px;
+	
+	color:#000;
+}
+#content7 > #Cont7A > .TagAPayan > .pm1:hover{
+	text-decoration:none;
+}
+#content8{
+	width:1359px;
+	height:200px;
+	padding:40px 80px;
+	//border:1px solid green;
+	position:absolute;
+	top:5670px;
+	
+	right:0;
+}
+#content8 > #Cont8{
+	width:1159px;
+	height:100%;
+	//border:1px solid red;
+	margin:0 auto;
+	padding:0 100px;
+}
+#content8 > #Cont8 > #Cont8xd1{
+	width:170px;
+	height:172px;
+	//border:1px solid red;
+	float:right;
+	background:url(img/header/c968eac8.svg) no-repeat 50% 30%;
+	background-size:130px;
+	color:#555;
+	font-family:Yekan;
+	font-size:20px;
+	line-height:319px;
+	text-align:center;
+	margin-left:90px;
+	margin-right:115px;
+	cursor:pointer;
+}
+#content8 > #Cont8 > #Cont8xd2{
+	width:219px;
+	height:172px;
+	//border:1px solid red;
+	float:right;
+	background:url(img/header/bc93f765.svg) no-repeat 50% 30%;
+	background-size:130px;
+	color:#555;
+	font-family:Yekan;
+	font-size:20px;
+	line-height:316px;
+	text-align:center;
+	margin:0 90px;
+	cursor:pointer;
+}
+#content8 > #Cont8 > #Cont8xd3{
+	width:180px;
+	height:172px;
+	//border:1px solid red;
+	float:right;
+	background:url(img/header/bafc4f4a.svg) no-repeat 50% 30%;
+	background-size:130px;
+	color:#555;
+	font-family:Yekan;
+	font-size:20px;
+	line-height:310px;
+	text-align:center;
+	margin-left:90px;
+	margin-right:90px;
+	cursor:pointer;
+}
+#footer{
+	//border:1px solid #ccc;
+	width:1359px;
+	position:absolute;
+	top:6700px;
+	padding:24px 80px 8px;
+	right:0;
+}
+#footer > #footerhead{
+	//border-bottom:1px solid #ccc;
+	width:1359px;
+	height:24px;
+	
+	
+}
+#footer > #footerhead > img{
+	width:150px;
+	height:100%;
+	float:right;
+	margin-top:-22px;
+	margin-left:5px;
+	
+}
+#footer > #footerhead > hr{
+	color:#ccc;
+	
+}
+#footer > #footercontent01{
+	//border:1px solid green;
+	width:1359px;
+	height:204px;
+}
+#footer > #footercontent01 > .FooterCont01{
+	//border:1px solid yellow;
+	width:290px;
+	height:180px;
+	padding-top:20px;
+	float:right;
+	margin:0 28px;
+}
+#footer > #footercontent01 > .FC1{
+	margin-right:4px;
+}
+#footer > #footercontent01 > .FC4{
+	margin-left:4px;
+}
+#footer > #footercontent01 > .FooterCont01 > .FC01A{
+	display:block;
+	text-align:right;
+	//border:1px solid yellow;
+	font-family:yekan;
+	//height:30px;
+	font-size:15px;
+	color:#555;
+	cursor:pointer;
+	//padding:2px 0;
+	margin-bottom:12px;
+}
+#footer > #footercontent01 > .FooterCont01 > .Fca1{
+	height:35px;
+	font-size:18px;
+	cursor:default;
+	color:#000;
+}
+#footer > #footercontent01 > .FooterCont01 > .FC01Div{
+	//border:1px solid red;
+	width:290px;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd1{
+	height:31px;
+	width:290px;
+	text-align:right;
+	font-family:Yekan;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2{
+	height:20px;
+	width:290px;
+	margin:25px 0 26.67px;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #twitter{
+	height:20px;
+	width:20px;
+	//border:1px solid green;
+	float:left;
+	margin-left:2px;
+	cursor:pointer;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #twitter > img{
+	height:100%;
+	width:100%;
+
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #telegram{
+	height:20px;
+	width:20px;
+	//border:1px solid green;
+	float:left;
+	margin:0 112px;
+	cursor:pointer;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #telegram > img{
+	height:100%;
+	width:100%;
+
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #instegram{
+	height:20px;
+	width:20px;
+	//border:1px solid green;
+	float:left;
+	cursor:pointer;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd2 > #instegram > img{
+	height:100%;
+	width:100%;
+
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd3{
+	height:21px;
+	width:290px;
+	font-family:Yekan;
+	text-align:right;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd4{
+	height:44px;
+	width:290px;
+	padding-top:12px;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd4 > #flashfc{
+	width:40px;
+	height:44px;
+	background:#ccc url(img/header/icons8-arrow-50.png) no-repeat 50%;
+	background-size:40px;
+	float:left;
+	margin-left:1.5px;
+}
+#footer > #footercontent01 > .FooterCont01 > .fcd4 > form > #searchfooter{
+	padding:10px 8px;
+	width:228px;
+	height:22px;
+	float:left;
+	outline:none;
+	font-family:Yekan;
+	font-size:15px;
+	text-align:right;
+}
+#footer > #footercontent02{
+	border-bottom:1px solid #ccc;
+	width:1359px;
+	height:52px;
+	padding-top:24px;
+}
+#footer > #footercontent02 > #DownloadApkWeb{
+	//border:1px solid red;
+	width:588px;
+	height:52px;
+	float:left;
+}
+#footer > #footercontent02 > #DownloadApkWeb > .sib{
+	//border:1px solid blue;
+	width:133px;
+	height:40px;
+	float:left;
+	margin-right:12px;
+	margin-bottom:12px;
+	cursor:pointer;
+}
+#footer > #footercontent02 > #DownloadApkWeb > .sib > img{
+	width:100%;
+	height:100%;
+}
+#footer > #footercontent02 > #textfoot02{
+	//border:1px solid red;
+	height:24px;
+	float:right;
+	font-family:Yekan;
+	font-size:17px;
+}
+#footer > #footercontent03{
+	border-bottom:1px solid #ccc;
+	width:1359px;
+	height:145px;
+	padding:24px 0;
+}
+#footer > #footercontent03 > #etehadie{
+	//border:1px solid green;
+	width:462px;
+	height:126px;
+}
+#footer > #footercontent03 > #etehadie > .etehadie1{
+	//border:1px solid #ccc;
+	width:134px;
+	height:124px;
+	margin-right:18px;
+	float:right;
+}
+#footer > #footercontent03 > #etehadie > .etehadie1 > #etehadieimg1{
+	padding-left:20px;
+	padding-top:10px;
+}
+#footer > #footercontent03 > #etehadie > .etehadie1 > #etehadieimg2{
+	padding-left:20px;
+	padding-top:10px;
+}
+#footer > #footercontent03 > #etehadie > .etehadie1 > #etehadieimg3{
+	padding-left:35px;
+	padding-top:10px;
+}
+#footer > #footercontent03 > #textfootercont03{
+	width:895px;
+	height:145px;
+	//border:1px solid green;
+	float:right;
+}
+#footer > #footercontent03 > #textfootercont03 > h2{
+	font-family:Yekan;
+	font-size:20px;
+	margin:0 0;
+	float:right;
+}
+#footer > #footercontent03 > #textfootercont03 > #textfootcont3{
+	width:895px;
+	height:140px;
+	//border:1px solid red;
+	margin-top:30px;
+}
+#footer > #footercontent03 > #textfootercont03 > #textfootcont3 > #matnfooter{
+	width:895px;
+	height:80px;
+	border:1px solid #fff;
+	margin-top:8px;
+	font-family:Yekan;
+	font-size:16px;
+	text-align:right;
+	color:#555;
+	line-height:26px;
+	position:relative;
+}
+#footer > #footercontent03 > #textfootercont03 > #textfootcont3 > #matnfooter > #matnfootermenu{
+	width:895px;
+	height:0;
+	opacity:0;
+	visibility:hidden;
+	//border:1px solid yellow;
+	position:absolute;
+	top:80px;
+	right:0;
+	font-family:Yekan;
+	font-size:16px;
+	text-align:right;
+	color:#555;
+	line-height:40px;
+	background:#fff;
+}
+#footer > #footercontent03 > #textfootercont03 > #textfootcont3 > #namayeshbishtar{
+	width:895px;
+	height:25px;
+	//border:1px solid lightblue;
+	margin-top:30px;
+	font-family:Yekan;
+	text-align:right;
+	foln-size:15px;
+	cursor:pointer;
+	
+	
+}
+#footer > #footercontent03 > #textfootercont03 > #textfootcont3 > #matnfooter > #bastan{
+	width:895px;
+	height:25px;
+	//border:1px solid lightblue;
+	margin-top:8px;
+	font-family:Yekan;
+	text-align:right;
+	font-size:15px;
+	cursor:pointer;
+	position:absolute;
+	right:0;
+	top:417px;
+	opacity:0;
+	visibility:hidden;
+}
+#footer > #footerfoot{
+	//border:1px solid red;
+	width:1359px;
+	height:24px;
+}
+#footer > #footerfoot > #footerfootp1{
+	color:#555;
+	font-family:Yekan;
+	font-size:17px;
+	line-height:0;
+	float:right;
+	
+}
+#footer > #footerfoot > #footerfootp2{
+	color:#555;
+	
+	font-size:17px;
+	line-height:0;
+	float:left;
+	
+}
+		
+</style>
+</head>
+<body>
+	<div id="header"> 
+		<div id="header02"> 
+			<div id="header03"> 
+				<div id="header04">
+					<div id="headRight"> 
+						<ul id="headRightItems">
+							<li class="headRightItems1 it02">
+								<a href="https://www.digistyle.com/users/login-register/" title="مشاهده حساب کاربری">وارد شوید</a>
+							</li>
+							<li class="headRightItems1 it01">
+								<img src="img/header/icons8-basket-24.png">
+								<div id="headRightMenu"> 
+									<img src="img/header/Screenshot 01.png">
+									<div id="headRightMenu02"> .سبد خرید شما خالی است </div>
+									<div id="headRightMenu03"> شاید این صفحات برای شما جذاب باشند </div>
+									<div id="headRightMenu04"> 
+										<a class="headRightMenuA A01" href="https://www.digistyle.com/sale-landing/"> حراج استایل </a>
+										<span class="headRightMenuSpan">  </span>
+										<a class="headRightMenuA A02" href="https://www.digistyle.com/pages/brand/"> برند های برتر </a>
+										<span class="headRightMenuSpan">  </span>
+										<a class="headRightMenuA A03" href="https://www.digistyle.com/landings/designers/"> خانه طراحان ایرانی </a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="headCenter"> 
+						<div id="DigistyleLogo"><a href="https://www.digistyle.com/?ref=home"> DIGISTYLE </a></div>
+						<div id="lineCenter01">  </div>
+						<div id="headMenu01"> 
+							<div class="itemsMenu1 it01"> زنانه </div>
+							<div class="itemsMenu1 it02"> مردانه </div>
+							<div class="itemsMenu1 it03"> بچگانه </div>
+							<div class="itemsMenu1 it04"> زیبایی و سلامت </div>
+							
+							<div id="lineCenter02">  </div>
+							
+							<div class="itemsMenu1 it05"> حراج استایل </div>
+							<div class="itemsMenu1 it06"> برندها
+								<div id="megaMenuBrand"> 
+									<div id="megaMenuBrand02"> 
+										<div class="megaMenuBrand02 mmb01"> </div>
+										<div id="megaMenuLineCenter01">  </div>
+										<div class="megaMenuBrand02 mmb02"> 
+											
+											<span id="megaMenuBrandSpan01"> بهترین طراحان ایرانی </span>
+											
+											<div id="megaMenuBrandImg"> 
+												<div class="megaMenuBrandImg1 Bi1"> 
+													<img src="img/header/brand01.jpg">
+												</div>
+												<div class="megaMenuBrandImg1 Bi2"> 
+													<img src="img/header/brand02.jpg">
+												</div>
+												<div class="megaMenuBrandImg1 Bi3"> 
+													<img src="img/header/brand03.jpg">
+												</div>
+												<div class="megaMenuBrandImg1 Bi4"> 
+													<img src="img/header/brand04.jpg">
+												</div>
+
+											</div>
+											<span id="megaMenuBrandSpan02"> مشاهده خانه طراحان ایرانی </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="itemsMenu1 it07"> خانه ساعت </div>
+							<div class="itemsMenu1 it08"> مد پایدار </div>
+						</div>
+					</div>
+					<div id="headLeft"> 
+						<div id="headLeftSearch">
+							<div class="headLeftSearch s01"> 
+								<img src="img/header/icons8-search-24.png">
+							</div>
+							<div class="headLeftSearch s02"> 
+								<form>
+									<input id="headLeftSearchInput" type="text" placeholder="جستوجوی محصولات از 2390 برند">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<div id="slideShow">
+		<div id="sliders"> 
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 01.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 02.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 03.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 04.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 05.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 06.jpg">
+			</div>
+			<div class="itemsSlidshow">
+				<img src="img/header/slider 07.jpg">
+			</div>
+
+		</div>
+		<div id="rightclickslidr">  </div>
+		<div id="leftclickslidr">  </div>
+	</div>
+	</div>
+<div id="content"> 
+	<div id="content1"> 
+		<div id="contSlid01">
+		
+		
+		
+		
+		
+		
+<div id="slider">  
+	<div id="gal">  
+		
+		<div class="items"> 
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j1.jpg">
+					<div id="it1"> پاتن جامه </div>
+					<div id="it2"> 50% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d1"> ...مانتو کتی زنانه جامه مدل 113731010046846 رنگ </div>
+					<div class="id02 d2"> 
+						<div class="id03 f2"> 590,000تومان </div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j2.jpg">
+					<div id="it1"> کیکی راکی </div>
+					<div id="it2"> 70% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d3">BB2712-055 شومیز زنانه کیکی راکی مدل </div>
+					<div class="id02 d4">
+						<div class="id03 f3"> 537,000تومان  </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j3.jpg">
+					<div id="it1"> سرژه </div>
+					<div id="it2"> 20% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d5"> ...مانتو کتی زنانه سرژه مدل 2116587 یقه پهن سرشانه پیل </div>
+					<div class="id02 d6">
+						<div class="id03 f4"> ۱,۴۹۹,۰۰۰تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="items"> 
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j4.jpg">
+					<div id="it1"> چرم مشهد </div>
+					<div id="it2"> 49% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d7">J2592-001 کفش زنانه چرم مشهد مدل </div>
+					<div class="id02 d8"> 
+						<div class="id03 f5"> 2,537,100تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j5.jpg">
+					<div id="it1"> کفش شیما </div>
+					<div id="it2"> 29% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d9"> کفش مخصوص دویدن مردانه شیما مدل 4778874142 </div>
+					<div class="id02 d10">
+						<div class="id03 f6"> 629,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j6.jpg">
+					<div id="it1"> سرژه </div>
+					
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d11"> ...شلوار زنانه سرژهمدل 208326 کمرکش دمپا دکمه دار رن </div>
+					<div class="id02 d12">
+						<div class="id03 f7"> 300,200تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<div class="items"> 
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j7.jpg">
+					<div id="it1"> تی ست </div>
+					
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d14">mz27 شلوار زنانه تی ست مدل </div>
+					<div class="id02 d15"> 
+						<div class="id03 f8"> 796,000تومان </div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j8.jpg">
+					<div id="it1"> دونابل </div>
+					<div id="it2"> 39% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d16">225334300MC99 شال زنانه دونابل مدل  </div>
+					<div class="id02 d17">
+						<div class="id03 f9"> 103,600تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j9.jpg">
+					<div id="it1"> دونابل </div>
+					<div id="it2"> 47% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d18"> شال زنانه دونابل مدل 2253123700799 </div>
+					<div class="id02 d19">
+						<div class="id03 f10"> 396,400تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+		
+		<div class="items"> 
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j10.jpg">
+					<div id="it1"> جنتالین </div>
+					<div id="it2">  </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d20"> روغن بدن جنتالین مدل شتر مرغ حجم 95 میلی لیتر </div>
+					<div class="id02 d21"> 
+						<div class="id03 f11"> 169,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j11.jpg">
+					<div id="it1"> تکنیک + 07 </div>
+					<div id="it2"> 36% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d22">TS-1 تی شرت آستین کوتاه ورزشی مردانه تکنیک +07 مدل </div>
+					<div class="id02 d23">
+						<div class="id03 f12"> 355,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j12.jpg">
+					<div id="it1"> مای </div>
+					<div id="it2"> 20% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d24">Black Diamond کرم پودر مای سری </div>
+					<div class="id02 d25">
+						<div class="id03 f13"> 173,000تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<div class="items"> 
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j13.jpg">
+					<div id="it1"> سانتا باربارا پولو راکت کلاب </div>
+					<div id="it2"> 44% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d26"> ساعت مچی عقربه ای مردانه سانتا باربارا پولو راکت </div>
+					<div class="id02 d27"> 
+						<div class="id03 f14"> 3,506,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j14.jpg">
+					<div id="it1"> اسپیور </div>
+					<div id="it2"> 48% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d28">DWC430300 کیف رودوشی زنانه اسپیور مدل  </div>
+					<div class="id02 d29">
+						<div class="id03 f15"> 259,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems"> 
+				<div id="galit1"> 
+					<img src="img/header/j15.jpg">
+					<div id="it1"> رندل </div>
+					<div id="it2"> 23% </div>
+				</div>
+				<div id="galit2"> 
+					<div class="id01 d30">Bloom Plus اسپری ضد تعریق زنانه رندل مدل </div>
+					<div class="id02 d31">
+						<div class="id03 f16"> 87,500تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+		
+	</div>
+	<div id="right">   </div>	
+	<div id="left">   </div>
+ </div>
+	
+	
+		
+		
+		
+		
+		
+		
+			<p id="contSlidp01">استایل هفته</p>
+			<p id="contSlidp02">خرید همه</p>
+			<div id="contSlid01Img"> 
+				<img src="img/header/n1.jpg">
+			</div>
+			
+			
+		
+			
+			
+			
+			
+			
+			<div id="slid01A">
+				
+			</div>
+		</div>
+		
+		
+	</div>
+
+
+<div id="ContentMenu">
+	<div id="ContMenu"> 
+		<div id="CMI1">مردانه
+			<div id="ContMenuImg"> 
+				<div id="JA1"> 
+					<div class="mardane"> لباس مردانه </div>
+				</div>
+				<div class="JayeAks JA2"> 
+					<div class="CMG G1"> 
+						<div class="mardane"> ورزشی مردانه </div>
+					</div>
+					<div class="CMG G2"> 
+						<div class="mardane"> اکسسوری مردانه </div>
+					</div>
+					<div class="CMG G3"> 
+						<div class="mardane"> کفش مردانه </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="CMI2"> زنانه 
+			<div id="ContMenuImg01"> 
+				<div id="JA3"> 
+					<div class="mardane"> لباس زنانه </div>
+				</div>
+				<div class="JayeAks JA2"> 
+					<div class="CMG G1"> 
+						<div class="mardane"> ورزشی زنانه </div>
+					</div>
+					<div class="CMG G2"> 
+						<div class="mardane"> اکسسوری زنانه </div>
+					</div>
+					<div class="CMG G3"> 
+						<div class="mardane"> کفش زنانه </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="CMI3"> بچگانه 
+			<div id="ContMenuImg02"> 
+				<div id="JA4"> 
+					<div class="mardane"> نوزاد </div>
+				</div>
+				<div class="JayeAks JA2"> 
+					<div class="CMG G1"> 
+						<div class="mardane"> پسرانه </div>
+					</div>
+					<div class="CMG G2"> 
+						<div class="mardane"> دخترانه </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="CMI4"> زیبایی و سلامت 
+			<div id="ContMenuImg03"> 
+				<div id="JA4"> 
+					<div class="mardane"> لباس زنانه </div>
+				</div>
+				<div class="JayeAks JA2"> 
+					<div class="CMG G1"> 
+						<div class="mardane"> ورزشی زنانه </div>
+					</div>
+					<div class="CMG G2"> 
+						<div class="mardane"> اکسسوری زنانه </div>
+					</div>
+					<div class="CMG G3"> 
+						<div class="mardane"> کفش زنانه </div>
+					</div>
+					<div class="CMG G4"> 
+						<div class="mardane"> کفش زنانه </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+	<div id="content2">
+		
+		
+		<div id="slider02">  
+			<div id="gal02">  
+		
+		<div class="items02"> 
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l1.jpg">
+					<div id="it1g"> فرد </div>
+					
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d1">Sha.r.002 شلوار مردانه مدل  </div>
+					<div class="id02 d2"> 
+						<div class="id03 f2"> 375,000تومان </div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l2.jpg">
+					<div id="it1g"> کارترز </div>
+					<div id="it2h"> 28% </div>
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d3"> زیر دکمه دار استین رکابی کارترز لاو مدل 1-1002 </div>
+					<div class="id02 d4">
+						<div class="id03 f3"> 74,000تومان  </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l3.jpg">
+					<div id="it1g"> سینره </div>
+					<div id="it2h"> 16% </div>
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d5"> ضد افتاب بی رنگ سینره مدل </div>
+					<div class="id02 d6">
+						<div class="id03 f4"> 210,000تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="items02"> 
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l4.jpg">
+					<div id="it1g"> هیدرودرم </div>
+					<div id="it2h"> 25% </div>
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d7"> 
+                        ستشو صورت هیدرودرم مدل 
+                     </div>
+					<div class="id02 d8"> 
+						<div class="id03 f5"> 67,000تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l5.jpg">
+					<div id="it1g"> سیرتا </div>
+					<div id="it2h"> 23% </div>
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d9"> محلول تقویت کننده مژه سیرتا </div>
+					<div class="id02 d10">
+						<div class="id03 f6"> 370,240تومان </div>
+					</div>
+				</div>
+			</div>
+			<div class="galItems02"> 
+				<div id="galit3"> 
+					<img src="img/header/l6.jpg">
+					<div id="it1g"> سیرتا </div>
+					<div id="it2h"> 24% </div>
+				</div>
+				<div id="galit4"> 
+					<div class="id01 d11"> سرم احیا کننده ابرو سیرتا  </div>
+					<div class="id02 d12">
+						<div class="id03 f7"> 368,350تومان </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	
+	</div>
+	<div id="right02">   </div>	
+	<div id="left02">   </div>
+ </div>
+		
+		
+		
+		
+		<div id="titleslider1"> پرفروش ترین های اخیر </div>
+		<div id="moshahede"> مشاهده همه </div>
+
+
+	</div>
+
+<div id="content3"> 
+
+	<div id="ndombe1"> 
+		<div id="nd01"> محبوب ترین برند ها </div>
+		<div id="nd02"> مشاهده همه برند ها </div>
+	</div>
+	<div id="ndombe2"> 
+		<div id="ndombe2Img">
+			<img src="img/header/v1.png">
+			<div id="ndombe2p"> مشاهده همه مصحولات </div>
+		</div>
+	</div>
+	<div id="ndombe3"> 
+		<div class="ndombe31 nb1"> 
+			<div id="amb1"> 
+				<img src="img/header/lampa1.jpg">
+				<div id="nD01"> اورال-بی </div>
+			</div>
+			<div id="amb2"> 
+				<div id="nD02">Precision Clean سری یدک مسواک برقی اورال-بی مدل </div>
+				<div id="nD03"> 197,900تومان </div>
+			</div>
+		</div>
+		<div class="ndombe31 nb2"> 
+			<div id="amb1"> 
+				<img src="img/header/lampa2.jpg">
+				<div id="nD01"> اورال-بی </div>
+			</div>
+			<div id="amb2"> 
+				<div id="nD02">Cross action سری یدک مسواک برقی اورال-بی مدل </div>
+				<div id="nD03"> 739,810تومان </div>
+			</div> 
+		</div>
+		<div class="ndombe31 nb3"> 
+			<div id="amb1"> 
+				<img src="img/header/lampa3.jpg">
+				<div id="nD01"> اورال-بی </div>
+			</div>
+			<div id="amb2"> 
+				<div id="nD02"> یدک مسواک بین دندانی اورال-بی بسته 6 عددی </div>
+				<div id="nD03"> 116,000تومان </div>
+			</div> 
+		</div>
+	</div>
+	<div id="ndombe4"> 
+		<div id="ndombe4Img">
+			<img src="img/header/v2.png">
+			<div id="ndombe4p"> مشاهده همه مصحولات </div>
+		</div>
+	</div>
+	<div id="ndombe5"> 
+		<div class="ndombe51 nb4"> 
+			<div id="amb3"> 
+				<img src="img/header/lamp4.jpg">
+				<div id="nD04"> گلدن رز </div>
+			</div>
+			<div id="amb4"> 
+				<div id="nD05"> مداد کانتورینگ گلدن رز شماره 23 </div>
+				<div id="nD06"> 123,820تومان </div>
+			</div>
+		</div>
+		<div class="ndombe51 nb5"> 
+			<div id="amb3"> 
+				<img src="img/header/lamp5.jpg">
+				<div id="nD04"> گلدن رز </div>
+			</div>
+			<div id="amb4"> 
+				<div id="nD05">Dream مداد لب گلدن رز مدل </div>
+				<div id="nD06"> 79,000تومان </div>
+			</div> 
+		</div>
+		<div class="ndombe51 nb6"> 
+			<div id="amb3"> 
+				<img src="img/header/lamp6.png">
+				<div id="nD04"> گلدن رز </div>
+			</div>
+			<div id="amb4"> 
+				<div id="nD05"> ریمل گلدن رز مدل اسموکی لشز </div>
+				<div id="nD06"> 140,870تومان </div>
+			</div> 
+		</div>
+	</div>
+	
+ </div>
+
+<div id="content4">
+	<div id="Cont4head"> زیبایی و سلامت </div>
+	<div id="Cont4"> 
+		<div class="poster post1"> 
+			<img src="img/header/poster1.jpg">
+			
+		</div>
+		<div class="poster post2"> 
+			<img src="img/header/poster2.jpg">
+			
+		</div>
+		<div class="poster post3"> 
+			<img src="img/header/poster3.jpg">
+			
+		</div>
+		<div class="poster post4"> 
+			<img src="img/header/poster4.jpg">
+			
+		</div>
+	</div>
+	
+	
+</div>
+
+<div id="content5"> 
+	<div id="AkharinMatlabHead"> آخرین مطالب بلاگ دیجی استایل </div>
+	<div id="AkharinMatlabCont"> 
+		<div class="Matlab lab1"> 
+			<div id="lab1img"> 
+				<img src="img/header/payan1.jpg">
+			</div>
+			<div id="lab1p"> 
+				<div id="lab1p1"> بررسی کیف دستی زنانه اسپیور؛ طراحی شیک اما نه خیلی دقیق </div>
+				<div id="lab1p2"> 
+                    یکی از اکسسوری‌های پرکاربرد در استایل زنانه، کیف دستی است. کیف‌ها در عین اینکه جذابیت بیشتری به استایل ما می‌بخشند، همچنین به ما کمک می‌کنند تا بتوانیم لوازم ضروری‌مان را داخل آن قرار دهیم و به راحتی به آن‌ها دسترسی داشته باشیم. در این سری از ویدیوهای تلنت قصد داریم کیف دستی زنانه اسپیور مدل  ...
+				</div>
+			</div>
+		</div>
+		<div class="Matlab lab2"> 
+			<div id="lab1img"> 
+				<img src="img/header/payan2.jpg">
+			</div>
+			<div id="lab1p"> 
+				<div id="lab1p1"> 
+                    چگونه کفش کتانی کانورس را در استایل خود ست کنیم؟
+                 </div>
+				<div id="lab1p2"> 
+                    با وجود اینکه برندهای مختلفی از کفش‌های کتانی وجود دارد اما یک برند بالاتر از همه ایستاده است و آن برند آمریکایی کانورس (Converse) است. این برند آمریکایی مشهور بیش از صد سال است که پر قدرت به تولید کفش‌های کتانی مشغول است. کانورس برای علاقه‌مندان به دنیای مد کفش‌های کتانی کلاسیکی را تولید می‌کند  ...
+                 </div>
+			</div>
+		</div>
+		<div class="Matlab lab3"> 
+			<div id="lab1img"> 
+				<img src="img/header/payan3.jpg">
+			</div>
+			<div id="lab1p"> 
+				<div id="lab1p1"> 
+                    انواع کفش جیر را چگونه باید تمیز کنیم؟
+                 </div>
+				<div id="lab1p2"> 
+                    چگونه کفش‌ جیر را تمیز کنیم؟ کفش‌های جیر در تمام طول سال مورد‌استفاده قرار می‌گیرند. در تابستان کفش کالج و لوفر و در زمستان بوت‌هایی که از جنس جیر هستند، طرفداران بسیاری دارند. رنگ‌بندی متنوع و جذابیت ظاهری جیر، جلوه‌ی خاصی به استایل شما می‌بخشد. ولی جیر باتوجه به ساختارش به‌راحتی کثیف می‌شود. همچنین به  ...
+                 </div>
+			</div>
+		</div>
+		<div class="Matlab lab4"> 
+			<div id="lab1img"> 
+				<img src="img/header/payan4.jpg">
+			</div>
+			<div id="lab1p"> 
+				<div id="lab1p1"> 
+                    هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید
+                 </div>
+				<div id="lab1p2"> 
+                    وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد. پرادا با نوآوری و ابهام مترادف است و به‌عنوان یکی از هیجان انگیزترین برندها در صنعت مد شناخته می‌شود. تاریخچه‌ی این برند بیش از یک قرن پیش با یک تجارت خانوادگی کوچک محصولات چرمی آغاز می‌شود. پرادا یکی از برجسته‌ترین برندهای  ...
+                 </div>
+			</div>
+		</div>
+	</div>
+ </div>
+
+<div id="content6"> 
+	<div id="Cont6img">
+		<img src="img/header/49789bde.jpg">
+	</div>
+ </div>
+
+<div id="content7"> 
+	<div id="Cont7A"> 
+		<div class="TagAPayan TAP1"> 
+			<a class="payanMardane pm1"> مردانه </a>
+			<a class="payanMardane pm2"> لباس مردانه </a>
+			<a class="payanMardane pm3"> کفش مردانه </a>
+			<a class="payanMardane pm4"> اکسسوری مردانه </a>
+			<a class="payanMardane pm5"> ورزشی مردانه </a>
+		</div>
+		<div class="TagAPayan TAP2"> 
+			<a class="payanMardane pm1"> زنانه </a>
+			<a class="payanMardane pm2"> لباس زنانه </a>
+			<a class="payanMardane pm3"> کفش زنانه </a>
+			<a class="payanMardane pm4"> اکسسوری زنانه </a>
+			<a class="payanMardane pm5"> ورزشی زنانه </a>
+		</div>
+		<div class="TagAPayan TAP3"> 
+			<a class="payanMardane pm1"> بچهگانه </a>
+			<a class="payanMardane pm2"> نوزاد </a>
+			<a class="payanMardane pm3"> پسرانه </a>
+			<a class="payanMardane pm4"> دخترانه </a>
+			
+		</div>
+		<div class="TagAPayan TAP4"> 
+			<a class="payanMardane pm1"> زیبایی و سلامت </a>
+			<a class="payanMardane pm2"> لوازم آرایشی </a>
+			<a class="payanMardane pm3"> لوازم بهداشتی </a>
+			<a class="payanMardane pm4"> لوازم شخصی برقی </a>
+			<a class="payanMardane pm5"> عطر و ادکلن </a>
+			<a class="payanMardane pm6"> ابزار و سلامت </a>
+		</div>
+	</div>
+ </div>
+ 
+<div id="content8"> 
+	<div id="Cont8"> 
+		<div id="Cont8xd1"> تحویل سریع و آسان </div>
+		<div id="Cont8xd2"> 14 روز ضمانت برگشت کالا </div>
+		<div id="Cont8xd3"> ضمانت اصل بودن کالا </div>
+	</div>
+ </div>
+</div>
+
+
+	<div id="footer"> 
+		<div id="footerhead">
+			<img src="img/header/352f3537.svg"> 
+			<hr> 
+		</div>
+		<div id="footercontent01"> 
+			<div class="FooterCont01 FC1"> 
+				<a class="FC01A Fca1"> خرید </a>
+				<a class="FC01A Fca2"> مردانه </a>
+				<a class="FC01A Fca3"> زنانه </a>
+				<a class="FC01A Fca4"> بچگانه </a>
+				<a class="FC01A Fca5"> زیبایی و سلامت </a>
+			</div>
+			<div class="FooterCont01 FC2"> 
+				<a class="FC01A Fca1"> خدمات مشتریان </a>
+				<a class="FC01A Fca2"> پاسخ به پرسش های متداول </a>
+				<a class="FC01A Fca3"> رویه های بازگرداندن کالا </a>
+				<a class="FC01A Fca4"> شرایط استفاده </a>
+				<a class="FC01A Fca5"> حریم خصوصی </a>
+			</div>
+			<div class="FooterCont01 FC3"> 
+				<a class="FC01A Fca1"> اطلاعات دیجی استایل </a>
+				<a class="FC01A Fca2"> درباره دیجی استایل </a>
+				<a class="FC01A Fca3"> تماس با دیجی استایل </a>
+				<a class="FC01A Fca4"> همکاری با دیجی استایل </a>
+			</div>
+			<div class="FooterCont01 FC4"> 
+				<div class="FC01Div fcd1">021-61930300 :تلفن پشتیبانی </div>
+				<div class="FC01Div fcd2"> 
+					<div id="twitter"> <img src="img/header/icons8-twitter-20.png"> </div>
+					<div id="telegram"> <img src="img/header/icons8-telegram-20.png"> </div>
+					<div id="instegram"> <img src="img/header/icons8-instagram-20.png"> </div>
+				</div>
+				<div class="FC01Div fcd3"> ثبت نام در خبر نامه دیجی استایل </div>
+				<div class="FC01Div fcd4"> 
+					<div id="flashfc">  </div>
+					<form>
+						<input id="searchfooter" type="text" placeholder="ایمیل خود را وارد کنید">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="footercontent02"> 
+			<div id="DownloadApkWeb"> 
+				<div class="sib"> 
+					<img src="img/header/sib.png">
+				</div>
+				<div class="sib"> 
+					<img src="img/header/miket.png">
+				</div>
+				<div class="sib"> 
+					<img src="img/header/bazar.png">
+				</div>
+				<div class="sib"> 
+					<img src="img/header/googleplay.png">
+				</div>
+			</div>
+			<div id="textfoot02"> دانلود اپلیکیشن دیجی استایل </div>
+			
+		</div>
+		<div id="footercontent03"> 
+			<div id="textfootercont03"> 
+				<h2> فروشگاه اینترنتی مد و لباس دیجی استایل </h2>
+				<div id="textfootcont3"> 
+					<div id="matnfooter"> 
+						دیجی‌استایل، پس از تجربه‌ی موفق فروشگاه اینترنتی دیجی‌کالا به صورت تخصصی پا به عرصه مد، پوشاک و سبک زندگی گذاشت تا همان تجربه‌ی شیرین، در قالبی نو تکرار شود. در دیجی ‌استایل می‌توانید همه آنچه مرتبط با مد و پوشاک از انواع لباس زنانه، لباس مردانه و لباس بچگانه گرفته تا کیف و کفش و اکسسوری را با تخفیف ویژه در حراج ها، پیدا کنید و به سادگی یک ست کامل از جدیدترین‌ برندهای معتبر را بخرید. 
+						<div id="matnfootermenu"> 
+							در دیجی استایل برندهای ایرانی مشهوری نظیر چرم مشهد، درسا، کفش ملی، کفش شیما، شیفر، چرم کروکو، مارال چرم، بادی اسپینر، ال سی من، پاتن جامه، تن درست، زیبو، زی، کیکی رایکی، نیکتا و ... برندهای خارجی نظیر دیور (Dior)، آلدو (Aldo)، آندر آرمور (Under Armour)، نایکی (Nike)، اسکچرز (Skechers)، ریباک (Reebok)، سالامون (Salomon)، ری بن (Rey Ban)، ال سی وایکیکی (LC Waikiki)، پوما (Puma)، دنیلی (Daniellee) و... موجود است و می توانید جدیدترین محصولات این برندها رو به صورت آنلاین تهیه کنید و به راحتی درب منزل تحویل بگیرید.
+
+							همچنان دیجی استایل با ورود به دنیای زیبایی و سلامت انواع عطر و ادکلن، لوازم آرایش چشم و ابرو، آرایش صورت، لوازم شخصی برقی، بهداشت و زیبایی ناخن، ابزار سلامت و ... را در اختیار مشتریان قرار داده تا بتوانند از محصولات اورجینال و اصل خریداری کنند و در صورت مغایرت کالا تا 14 روز امکان بازگشت کالا را وجود دارد. پس همین حالا برای خرید انواع رنگ مو، سشوار، پنکیک، ماسک صورت، خط چشم، لاک ناخن، ادکلن، کانسیلر، شامپو، سایه ابرو و سایه چشم به فروشگاه اینترنتی دیجی استایل مراجعه کنید و تنها با چند کلیک محصول مورد نظر خود را سفارش دهید. 
+						</div>
+						<div id="bastan"> بستن </div>
+					</div>
+					<div id="namayeshbishtar"> مشاهده بیشتر </div>
+				</div>
+			</div>
+			<div id="etehadie"> 
+				<div class="etehadie1"> <img id="etehadieimg1" src="img/header/6e2d6b38.png"> </div>
+				<div class="etehadie1"> <img id="etehadieimg2" src="img/header/236e437c.png"> </div>
+				<div class="etehadie1"> <img id="etehadieimg3" src="img/header/3a24ea39.png"> </div>
+			</div>
+		
+		</div>
+		<div id="footerfoot"> 
+			<p id="footerfootp1">کليه حقوق اين سايت متعلق به شرکت نوآوران فن آوازه (فروشگاه اینترنتی دیجی‌استایل) می‌باشد </p>
+			<p id="footerfootp2"> digistyle.com - 2023 © Copyright </p>
+		</div>
+	</div>
+	
+	<script>
+		pos = 0;
+	rightclickslidr.onclick = function(){
+		if(pos > -600){
+			pos = pos -100;
+			sliders.style.left = pos + "%";
+		}
+		else if(pos == -600){
+			pos = 0;
+			sliders.style.left = pos + "%";
+		}
+	}
+	leftclickslidr.onclick = function(){
+		if(pos < 0){
+			pos = pos +100;
+			sliders.style.left = pos + "%";
+		}
+	}
+	
+	
+	
+		pos2 = 0;
+	right.onclick = function(){
+		if(pos2 > -400){
+			pos2 = pos2 -50;
+			gal.style.left = pos2 + "%";
+		}
+		else if(pos2 == -400){
+			pos2 = 0;
+			gal.style.left = pos2 + "%";
+		}
+	}
+	left.onclick = function(){
+		if(pos2 < 0){
+			pos2 = pos2 +50;
+			gal.style.left = pos2 + "%";
+		}
+	}
+	
+	
+	
+	
+	pos3 = 0;
+	right02.onclick = function(){
+		if(pos3 > -100){
+			pos3 = pos3 -50;
+			gal02.style.left = pos3 + "%";
+		}
+		else if(pos3 == -100){
+			pos3 = 0;
+			gal02.style.left = pos3 + "%";
+		}
+	}
+	left02.onclick = function(){
+		if(pos3 < 0){
+			pos3 = pos3 +50;
+			gal02.style.left = pos3 + "%";
+		}
+	}
+	
+	
+	
+	CMI1.onclick = function(){
+		ContMenuImg.style.opacity = "1";
+		ContMenuImg.style.visibility = "visible";
+		ContMenuImg01.style.opacity = "0";
+		ContMenuImg01.style.visibility = "hidden";
+		ContMenuImg02.style.opacity = "0";
+		ContMenuImg02.style.visibility = "hidden";
+		ContMenuImg03.style.opacity = "0";
+		ContMenuImg03.style.visibility = "hidden";
+		CMI1.style.borderBottom = "4px solid #000";
+		CMI2.style.borderBottom = "none";
+		CMI3.style.borderBottom = "none";
+		CMI4.style.borderBottom = "none";
+		CMI1.style.color = "#000";
+		CMI2.style.color = "rgb(117,117,117)";
+		CMI3.style.color = "rgb(117,117,117)";
+		CMI4.style.color = "rgb(117,117,117)";
+	}
+	
+	CMI2.onclick = function(){
+		ContMenuImg01.style.opacity = "1";
+		ContMenuImg01.style.visibility = "visible";
+		ContMenuImg.style.opacity = "0";
+		ContMenuImg.style.visibility = "hidden";
+		ContMenuImg02.style.opacity = "0";
+		ContMenuImg02.style.visibility = "hidden";
+		ContMenuImg03.style.opacity = "0";
+		ContMenuImg03.style.visibility = "hidden";
+		CMI2.style.borderBottom = "4px solid #000";
+		CMI1.style.borderBottom = "none";
+		CMI3.style.borderBottom = "none";
+		CMI4.style.borderBottom = "none";
+		CMI2.style.color = "#000";
+		CMI1.style.color = "rgb(117,117,117)";
+		CMI3.style.color = "rgb(117,117,117)";
+		CMI4.style.color = "rgb(117,117,117)";
+		
+	}
+	
+	CMI3.onclick = function(){
+		ContMenuImg02.style.opacity = "1";
+		ContMenuImg02.style.visibility = "visible";
+		ContMenuImg01.style.opacity = "0";
+		ContMenuImg01.style.visibility = "hidden";
+		ContMenuImg.style.opacity = "0";
+		ContMenuImg.style.visibility = "hidden";
+		ContMenuImg03.style.opacity = "0";
+		ContMenuImg03.style.visibility = "hidden";
+		CMI3.style.borderBottom = "4px solid #000";
+		CMI1.style.borderBottom = "none";
+		CMI2.style.borderBottom = "none";
+		CMI4.style.borderBottom = "none";
+		CMI3.style.color = "#000";
+		CMI2.style.color = "rgb(117,117,117)";
+		CMI1.style.color = "rgb(117,117,117)";
+		CMI4.style.color = "rgb(117,117,117)";
+		
+	}
+	CMI4.onclick = function(){
+		ContMenuImg03.style.opacity = "1";
+		ContMenuImg03.style.visibility = "visible";
+		ContMenuImg02.style.opacity = "0";
+		ContMenuImg02.style.visibility = "hidden";
+		ContMenuImg01.style.opacity = "0";
+		ContMenuImg01.style.visibility = "hidden";
+		ContMenuImg.style.opacity = "0";
+		ContMenuImg.style.visibility = "hidden";
+		CMI3.style.borderBottom = "none";
+		CMI1.style.borderBottom = "none";
+		CMI2.style.borderBottom = "none";
+		CMI4.style.borderBottom = "4px solid #000";
+		CMI4.style.color = "#000";
+		CMI2.style.color = "rgb(117,117,117)";
+		CMI3.style.color = "rgb(117,117,117)";
+		CMI1.style.color = "rgb(117,117,117)";
+		
+	}
+	
+	JA1.click()
+	 
+	namayeshbishtar.onclick = function(){
+		matnfootermenu.style.height = "336px";
+		matnfootermenu.style.opacity = "1";
+		matnfootermenu.style.visibility = "visible";
+		bastan.style.opacity = "1";
+		bastan.style.visibility = "visible";
+		//namayeshbishtar.style.opacity = "0";
+		//namayeshbishtar.style.visibility "hidden";
+	}
+	
+	bastan.onclick = function(){
+		matnfootermenu.style.height = "0";
+		matnfootermenu.style.opacity = "0";
+		matnfootermenu.style.visibility = "hidden";
+		bastan.style.opacity = "0";
+		bastan.style.visibility = "hidden";
+		
+	}
+	
+	</script>
+	
+</body>
+</html>
